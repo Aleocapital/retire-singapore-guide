@@ -523,6 +523,8 @@ body {
 
 .etf-table {
     font-size: 0.85rem;
+    display: grid;
+    gap: 0;
 }
 
 .etf-row {
@@ -541,6 +543,13 @@ body {
     font-weight: 600;
     color: var(--gray);
     font-size: 0.8rem;
+    background: var(--light);
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.etf-row.header span {
+    display: block;
 }
 
 .allocation-grid {
