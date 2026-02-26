@@ -1,0 +1,11 @@
+# Robots.txt for Singapore Retirement Guide
+# https://aleocapital.github.io/retire-singapore-guide/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://aleocapital.github.io/retire-singapore-guide/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
