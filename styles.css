@@ -465,3 +465,181 @@ body {
         display: none;
     }
 }
+
+/* SRS Investment Strategies */
+.strategy-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.strategy-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    border-top: 4px solid var(--secondary);
+}
+
+.strategy-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.strategy-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--secondary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.strategy-header h3 {
+    font-size: 1.15rem;
+    color: var(--dark);
+    margin: 0;
+}
+
+.strategy-details {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.strategy-details h4 {
+    font-size: 0.95rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.etf-table {
+    font-size: 0.85rem;
+}
+
+.etf-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.etf-row:last-child {
+    border-bottom: none;
+}
+
+.etf-row.header {
+    font-weight: 600;
+    color: var(--gray);
+    font-size: 0.8rem;
+}
+
+.allocation-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.allocation-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: var(--light);
+    border-radius: 10px;
+}
+
+.allocation-item .age-range {
+    font-weight: 600;
+    color: var(--dark);
+    min-width: 70px;
+}
+
+.allocation-item .allocation {
+    flex: 1;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.allocation-item .risk {
+    font-size: 0.75rem;
+    color: var(--gray);
+    background: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.stock-list {
+    list-style: none;
+}
+
+.stock-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.stock-list li:last-child {
+    border-bottom: none;
+}
+
+.stock-list strong {
+    color: var(--dark);
+}
+
+.strategy-list {
+    list-style: none;
+}
+
+.strategy-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    padding-left: 20px;
+    position: relative;
+}
+
+.strategy-list li:last-child {
+    border-bottom: none;
+}
+
+.strategy-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.warning-box {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: #fff;
+}
+
+.warning-box h3 {
+    color: #fff;
+}
+
+.warning-box ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.warning-box li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+.warning-box li::before {
+    content: "• ";
+    font-weight: bold;
+}
