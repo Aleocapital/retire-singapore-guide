@@ -458,6 +458,86 @@ body {
     }
 }
 
+/* Glossary Section */
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.glossary-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--primary);
+}
+
+.glossary-item h3 {
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.glossary-item p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+/* Resources Section */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.resource-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+}
+
+.resource-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.resource-card ul {
+    list-style: none;
+}
+
+.resource-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.resource-card li:last-child {
+    border-bottom: none;
+}
+
+.resource-card a {
+    color: var(--dark);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.resource-card a:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .glossary-grid,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Footer */
 .footer {
     background: var(--dark);
