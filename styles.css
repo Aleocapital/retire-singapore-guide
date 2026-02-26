@@ -749,22 +749,28 @@ body {
 .payout-table {
     font-size: 0.8rem;
     margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.payout-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
+.payout-table th,
+.payout-table td {
+    padding: 10px 8px;
+    text-align: left;
     border-bottom: 1px solid var(--border);
 }
 
-.payout-row:last-child {
-    border-bottom: none;
-}
-
-.payout-row.header {
+.payout-table th {
     font-weight: 600;
     color: var(--gray);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    background: var(--light);
+}
+
+.payout-table td:last-child {
+    text-align: right;
+    font-weight: 600;
 }
 
 .escalating-example {
