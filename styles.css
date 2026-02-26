@@ -523,33 +523,32 @@ body {
 
 .etf-table {
     font-size: 0.85rem;
-    display: grid;
-    gap: 0;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
-.etf-row {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 10px;
-    padding: 10px 0;
+.etf-table th,
+.etf-table td {
+    padding: 12px 10px;
+    text-align: left;
     border-bottom: 1px solid var(--border);
 }
 
-.etf-row:last-child {
-    border-bottom: none;
-}
-
-.etf-row.header {
+.etf-table th {
+    background: var(--light);
     font-weight: 600;
     color: var(--gray);
     font-size: 0.8rem;
-    background: var(--light);
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
+    text-transform: uppercase;
 }
 
-.etf-row.header span {
-    display: block;
+.etf-table tbody tr:hover {
+    background: #fafafa;
+}
+
+.etf-table td:first-child {
+    font-weight: 500;
 }
 
 .allocation-grid {
