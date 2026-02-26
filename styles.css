@@ -643,3 +643,273 @@ body {
     content: "• ";
     font-weight: bold;
 }
+
+/* CPF LIFE Section */
+.cpf-life-intro {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.cpf-life-badge {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.cpf-plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.cpf-plan-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.plan-header {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.plan-header.standard {
+    background: linear-gradient(135deg, #0066cc 0%, #004c99 100%);
+}
+
+.plan-header.escalating {
+    background: linear-gradient(135deg, var(--secondary) 0%, #00a86b 100%);
+}
+
+.plan-header.basic {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+}
+
+.plan-header h3 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.plan-tag {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+.plan-desc {
+    padding: 20px 20px 0;
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+.plan-details {
+    padding: 20px;
+}
+
+.plan-details h4 {
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.plan-details ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.plan-details li {
+    padding: 6px 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.plan-details li:last-child {
+    border-bottom: none;
+}
+
+.payout-table {
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.payout-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.payout-row:last-child {
+    border-bottom: none;
+}
+
+.payout-row.header {
+    font-weight: 600;
+    color: var(--gray);
+}
+
+.escalating-example {
+    background: var(--light);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+.escalating-example p {
+    margin: 5px 0;
+}
+
+.escalating-example strong {
+    color: var(--secondary);
+}
+
+.highlight-text {
+    background: #fff3cd;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin: 10px 0;
+    border-left: 3px solid #ffc107;
+}
+
+.plan-pros-cons {
+    padding: 0 20px 20px;
+}
+
+.plan-pros-cons .pros,
+.plan-pros-cons .cons {
+    font-size: 0.85rem;
+}
+
+.plan-pros-cons ul {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.plan-pros-cons li {
+    padding: 4px 0;
+    font-size: 0.8rem;
+}
+
+.maximize-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 40px;
+}
+
+.maximize-section h3 {
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 30px;
+}
+
+.maximize-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.maximize-item {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background: var(--light);
+    border-radius: 12px;
+}
+
+.max-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.max-content h4 {
+    font-size: 0.95rem;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.max-content p,
+.max-content ul {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.max-content ul {
+    margin-left: 15px;
+}
+
+.max-content li {
+    padding: 3px 0;
+}
+
+.cpf-calculator-box {
+    background: linear-gradient(135deg, var(--dark) 0%, #16213e 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+}
+
+.cpf-calculator-box h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.cpf-calculator-box p {
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.calc-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.calc-links .btn {
+    background: #fff;
+    color: var(--dark);
+}
+
+.calc-links .btn-outline {
+    border-color: #fff;
+    color: #fff;
+}
+
+.calc-links .btn-outline:hover {
+    background: #fff;
+    color: var(--dark);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .cpf-plans-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .maximize-grid {
+        grid-template-columns: 1fr;
+    }
+}
