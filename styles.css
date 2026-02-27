@@ -8,6 +8,25 @@
     --gray: #6c757d;
     --border: #e9ecef;
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --text-muted: #6c757d;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --primary: #4d94ff;
+    --primary-dark: #3377dd;
+    --secondary: #00d68f;
+    --accent: #ff8c5a;
+    --dark: #f8f9fa;
+    --light: #1a1a2e;
+    --gray: #adb5bd;
+    --border: #2d3748;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --bg-color: #0f1419;
+    --text-color: #e0e0e0;
+    --text-muted: #adb5bd;
 }
 
 * {
@@ -19,8 +38,9 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: #fff;
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -56,6 +76,39 @@ body {
 .nav {
     display: flex;
     gap: 30px;
+    align-items: center;
+}
+
+.theme-toggle {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Dark Mode Header */
+[data-theme="dark"] .header {
+    background: #1a1a2e;
+    border-bottom: 1px solid #2d3748;
+}
+
+[data-theme="dark"] .logo {
+    color: #f8f9fa;
+}
+
+[data-theme="dark"] .nav a {
+    color: #adb5bd;
+}
+
+[data-theme="dark"] .nav a:hover {
+    color: #4d94ff;
 }
 
 .nav a {
@@ -1430,4 +1483,130 @@ body {
     .maximize-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .section {
+    background: var(--bg-color);
+}
+
+[data-theme="dark"] .alt-bg {
+    background: #1a1a2e;
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, #0f1419 0%, #1a2744 100%);
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .info-box,
+[data-theme="dark"] .strategy-card,
+[data-theme="dark"] .investment-card,
+[data-theme="dark"] .cpf-plan-card,
+[data-theme="dark"] .checklist-column,
+[data-theme="dark"] .faq-item,
+[data-theme="dark"] .glossary-item,
+[data-theme="dark"] .resource-card,
+[data-theme="dark"] .chart-card,
+[data-theme="dark"] .calculator-container,
+[data-theme="dark"] .calc-results,
+[data-theme="dark"] .step-content,
+[data-theme="dark"] .maximize-section,
+[data-theme="dark"] .cpf-calculator-box {
+    background: #1a1a2e;
+    border-color: #2d3748;
+}
+
+[data-theme="dark"] .card h3,
+[data-theme="dark"] .info-box h3,
+[data-theme="dark"] .strategy-header h3,
+[data-theme="dark"] .investment-card h3,
+[data-theme="dark"] .faq-item h3,
+[data-theme="dark"] .glossary-item h3,
+[data-theme="dark"] .resource-card h3,
+[data-theme="dark"] .chart-card h3,
+[data-theme="dark"] .step-content h3,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4 {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .card li,
+[data-theme="dark"] .info-box li,
+[data-theme="dark"] .strategy-details li,
+[data-theme="dark"] .investment-card li,
+[data-theme="dark"] .faq-item p,
+[data-theme="dark"] .glossary-item p,
+[data-theme="dark"] .resource-card li,
+[data-theme="dark"] .resource-card a,
+[data-theme="dark"] .step-content li,
+[data-theme="dark"] .step-content p,
+[data-theme="dark"] p,
+[data-theme="dark"] li {
+    color: #adb5bd;
+}
+
+[data-theme="dark"] .cta-section {
+    background: linear-gradient(135deg, #004d2f 0%, #006644 100%);
+}
+
+[data-theme="dark"] .footer {
+    background: #0a0a0f;
+}
+
+[data-theme="dark"] .income-table table,
+[data-theme="dark"] .etf-table,
+[data-theme="dark"] .payout-table {
+    background: #1a1a2e;
+}
+
+[data-theme="dark"] .income-table th,
+[data-theme="dark"] .etf-table th,
+[data-theme="dark"] .payout-table th {
+    background: #2d3748;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .income-table td,
+[data-theme="dark"] .etf-table td,
+[data-theme="dark"] .payout-table td {
+    border-color: #2d3748;
+    color: #adb5bd;
+}
+
+[data-theme="dark"] .input-group input,
+[data-theme="dark"] .input-group select {
+    background: #1a1a2e;
+    border-color: #2d3748;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .input-group label {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .allocation-item {
+    background: #2d3748;
+}
+
+[data-theme="dark"] .highlight-box {
+    background: linear-gradient(135deg, #004080 0%, #003366 100%);
+}
+
+[data-theme="dark"] .warning-box {
+    background: linear-gradient(135deg, #cc4400 0%, #aa3300 100%);
+}
+
+[data-theme="dark"] .bar-container,
+[data-theme="dark"] .comp-bar {
+    background: #2d3748;
+}
+
+[data-theme="dark"] .payout-chart {
+    border-color: #2d3748;
+}
+
+[data-theme="dark"] .cta-links .btn {
+    color: #004d2f;
 }
