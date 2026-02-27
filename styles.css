@@ -458,6 +458,100 @@ body {
     }
 }
 
+/* Roadmap Section */
+.roadmap-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 20px 0;
+}
+
+.roadmap-timeline::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--border);
+    border-radius: 2px;
+}
+
+.roadmap-step {
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 50px;
+}
+
+.roadmap-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 40px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+}
+
+.step-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--primary);
+}
+
+.step-content h3 {
+    margin-bottom: 15px;
+    color: var(--dark);
+    font-size: 1.25rem;
+}
+
+.step-content ul {
+    list-style: none;
+}
+
+.step-content li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--gray);
+    position: relative;
+    padding-left: 20px;
+}
+
+.step-content li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .roadmap-timeline::before {
+        left: 20px;
+    }
+    .roadmap-step {
+        padding-left: 60px;
+    }
+    .step-marker {
+        width: 60px;
+        font-size: 0.8rem;
+    }
+}
+
 /* Calculator Section */
 .calculator-container {
     background: #fff;
