@@ -552,6 +552,205 @@ body {
     }
 }
 
+/* Charts Section */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.chart-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+}
+
+.chart-card h3 {
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Bar Chart */
+.bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bar-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bar-label {
+    width: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.bar-container {
+    flex: 1;
+    background: var(--light);
+    border-radius: 8px;
+    height: 35px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 8px;
+    min-width: fit-content;
+}
+
+/* Pie Chart */
+.pie-chart-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.pie-chart {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.pie-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+/* Comparison Chart */
+.comparison-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.comparison-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.comp-label {
+    width: 120px;
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.comp-bar {
+    flex: 1;
+    height: 28px;
+    background: var(--light);
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.comp-bar.highlight {
+    background: var(--secondary);
+}
+
+.comp-value {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.comp-bar.highlight .comp-value {
+    color: #fff;
+}
+
+.chart-note {
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin-top: 15px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Payout Chart */
+.payout-chart {
+    height: 180px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--border);
+}
+
+.payout-bar-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.payout-bar {
+    width: 60px;
+    background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.payout-val {
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.payout-label {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    .pie-chart-container {
+        flex-direction: column;
+    }
+}
+
 /* Calculator Section */
 .calculator-container {
     background: #fff;
