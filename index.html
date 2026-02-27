@@ -40,6 +40,7 @@
                 <a href="#srs">SRS</a>
                 <a href="#srs-invest">SRS Invest</a>
                 <a href="#investments">Investments</a>
+                <a href="#calculator">Calculator</a>
                 <a href="#faq">FAQ</a>
                 <a href="#glossary">Glossary</a>
                 <a href="#resources">Resources</a>
@@ -719,6 +720,49 @@
                 <div class="faq-item">
                     <h3>Should I pay off my home loan or invest?</h3>
                     <p>It depends on your situation. If your mortgage rate is higher than your expected investment returns, pay down debt. If you have low-rate HDB loans (2.6%), investing may yield higher returns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="section">
+        <div class="container">
+            <h2>🧮 Interactive Retirement Payout Estimator</h2>
+            <p class="section-intro">Estimate your monthly passive income based on your projected savings at age 65.</p>
+            
+            <div class="calculator-container">
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label for="ra-balance">Projected RA Balance at age 65 (S$):</label>
+                        <input type="range" id="ra-range" min="60000" max="1000000" step="5000" value="200000">
+                        <input type="number" id="ra-balance" value="200000">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="plan-type">CPF LIFE Plan:</label>
+                        <select id="plan-type">
+                            <option value="standard">Standard Plan (Max Payout)</option>
+                            <option value="escalating">Escalating Plan (Inflation Protection)</option>
+                            <option value="basic">Basic Plan (Max Bequest)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="other-income">Other Monthly Passive Income (S$):</label>
+                        <input type="number" id="other-income" value="1000" placeholder="Dividends, Rental, etc.">
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="result-item">
+                        <span class="result-label">Estimated CPF LIFE Payout</span>
+                        <span class="result-value" id="cpf-payout">S$0</span>
+                    </div>
+                    <div class="result-item total">
+                        <span class="result-label">Total Monthly Retirement Income</span>
+                        <span class="result-value" id="total-income">S$0</span>
+                    </div>
+                    <p class="calc-disclaimer">Estimates are based on 2026 payout ratios. Actual CPF LIFE payouts are determined by the CPF Board at the time of joining.</p>
                 </div>
             </div>
         </div>

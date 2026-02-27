@@ -45,4 +45,52 @@ document.querySelectorAll('.card, .investment-card, .info-box, .checklist-column
     observer.observe(el);
 });
 
+// Calculator Logic
+const raRange = document.getElementById('ra-range');
+const raBalance = document.getElementById('ra-balance');
+const planType = document.getElementById('plan-type');
+const otherIncome = document.getElementById('other-income');
+const cpfPayoutDisplay = document.getElementById('cpf-payout');
+const totalIncomeDisplay = document.getElementById('total-income');
+
+function updateCalculator() {
+    const ra = parseFloat(raBalance.value) || 0;
+    const other = parseFloat(otherIncome.value) || 0;
+    const plan = planType.value;
+
+    // Approximated payout ratios based on 2026 data
+    // Standard: ~1% of RA per month (approx range 0.9% - 1.1%)
+    let ratio = 0.0095; 
+    
+    if (plan === 'escalating') {
+        ratio = 0.0075; // Starts lower
+    } else if (plan === 'basic') {
+        ratio = 0.0085; // Medium
+    }
+
+    const cpfPayout = ra * ratio;
+    const total = cpfPayout + other;
+
+    cpfPayoutDisplay.textContent = `S$${Math.round(cpfPayout).toLocaleString()}`;
+    totalIncomeDisplay.textContent = `S$${Math.round(total).toLocaleString()}`;
+}
+
+if (raRange && raBalance) {
+    raRange.addEventListener('input', (e) => {
+        raBalance.value = e.target.value;
+        updateCalculator();
+    });
+
+    raBalance.addEventListener('input', (e) => {
+        raRange.value = e.target.value;
+        updateCalculator();
+    });
+
+    planType.addEventListener('change', updateCalculator);
+    otherIncome.addEventListener('input', updateCalculator);
+
+    // Initial calculation
+    updateCalculator();
+}
+
 console.log('🏝️ Singapore Retirement Guide loaded!');
