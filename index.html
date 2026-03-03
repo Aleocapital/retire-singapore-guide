@@ -42,6 +42,7 @@
                 <a href="#investments">Investments</a>
                 <a href="#roadmap">Roadmap</a>
                 <a href="#charts">Charts</a>
+                <a href="#fire-calc">FIRE Calc</a>
                 <a href="#calculator">Calculator</a>
                 <a href="#faq">FAQ</a>
                 <a href="#glossary">Glossary</a>
@@ -891,6 +892,58 @@
                         </div>
                     </div>
                     <p class="chart-note">Delaying from 65 to 70 = +21% higher payouts!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fire-calc" class="section alt-bg">
+        <div class="container">
+            <h2>🔥 Singapore FIRE Calculator</h2>
+            <p class="section-intro">Calculate when you can achieve Financial Independence and Retire Early in Singapore.</p>
+            
+            <div class="fire-calc-container">
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label for="fire-current-age">Current Age:</label>
+                        <input type="number" id="fire-current-age" value="30">
+                    </div>
+                    <div class="input-group">
+                        <label for="fire-savings">Current Savings & Investments (S$):</label>
+                        <input type="number" id="fire-savings" value="50000">
+                    </div>
+                    <div class="input-group">
+                        <label for="fire-monthly-contribution">Monthly Savings (S$):</label>
+                        <input type="number" id="fire-monthly-contribution" value="2000">
+                    </div>
+                    <div class="input-group">
+                        <label for="fire-expenses">Estimated Monthly Expenses in Retirement (S$):</label>
+                        <input type="number" id="fire-expenses" value="3000">
+                    </div>
+                    <div class="input-group">
+                        <label for="fire-return">Expected Annual Return (%):</label>
+                        <input type="number" id="fire-return" value="5" step="0.1">
+                    </div>
+                </div>
+
+                <div class="calc-results fire-results">
+                    <div class="result-highlight">
+                        <span class="highlight-label">FIRE Number (Target Pot)</span>
+                        <span class="highlight-value" id="fire-number">S$0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Years to FIRE</span>
+                        <span class="result-value" id="fire-years">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Age at Retirement</span>
+                        <span class="result-value" id="fire-age">0</span>
+                    </div>
+                    <div class="result-item total">
+                        <span class="result-label">Projected Monthly Passive Income</span>
+                        <span class="result-value" id="fire-passive-income">S$0</span>
+                    </div>
+                    <p class="calc-disclaimer">Based on the 4% Rule (safe withdrawal rate). In Singapore, your CPF LIFE payouts will provide an additional safety net beyond this number.</p>
                 </div>
             </div>
         </div>

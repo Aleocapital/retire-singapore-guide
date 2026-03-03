@@ -110,4 +110,46 @@ if (raRange && raBalance) {
     updateCalculator();
 }
 
+// FIRE Calculator Logic
+function updateFireCalc() {
+    const currentAge = parseFloat(document.getElementById('fire-current-age').value) || 0;
+    const savings = parseFloat(document.getElementById('fire-savings').value) || 0;
+    const monthlyContribution = parseFloat(document.getElementById('fire-monthly-contribution').value) || 0;
+    const monthlyExpenses = parseFloat(document.getElementById('fire-expenses').value) || 0;
+    const annualReturn = (parseFloat(document.getElementById('fire-return').value) || 0) / 100;
+
+    // FIRE Number = Annual Expenses * 25 (based on 4% rule)
+    const fireNumber = monthlyExpenses * 12 * 25;
+    document.getElementById('fire-number').textContent = `S$${Math.round(fireNumber).toLocaleString()}`;
+
+    // Solve for years: FutureValue = fireNumber
+    // FV = savings * (1+r)^n + contribution * (((1+r)^n - 1) / r)
+    // Using a simple loop for clarity and precision with monthly compounding
+    const monthlyRate = annualReturn / 12;
+    let currentPot = savings;
+    let months = 0;
+    const maxMonths = 600; // 50 years cap
+
+    if (currentPot < fireNumber) {
+        while (currentPot < fireNumber && months < maxMonths) {
+            currentPot = currentPot * (1 + monthlyRate) + monthlyContribution;
+            months++;
+        }
+    }
+
+    const yearsToFire = months / 12;
+    document.getElementById('fire-years').textContent = yearsToFire >= 50 ? '50+' : yearsToFire.toFixed(1);
+    document.getElementById('fire-age').textContent = yearsToFire >= 50 ? '80+' : Math.round(currentAge + yearsToFire);
+    document.getElementById('fire-passive-income').textContent = `S$${Math.round(monthlyExpenses).toLocaleString()}`;
+}
+
+const fireInputs = ['fire-current-age', 'fire-savings', 'fire-monthly-contribution', 'fire-expenses', 'fire-return'];
+fireInputs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', updateFireCalc);
+});
+
+// Initial FIRE calculation
+if (document.getElementById('fire-current-age')) updateFireCalc();
+
 console.log('🏝️ Singapore Retirement Guide loaded!');
